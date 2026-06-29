@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block contenu %}
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Des solutions informatiques sécurisées pour votre entreprise</h1>
+
+        <p>
+            Nous accompagnons les entreprises dans leur transformation
+            digitale avec des services fiables, sécurisés et innovants.
+        </p>
+
+        <a href="{{ url_for('services') }}" class="btn">
+            Découvrir nos services
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2>Nos filiales</h2>
+
+    <div class="card three">
+
+        <div class="service-card">
+
+            <img src="{{ url_for('static', filename='IMAGE/paris.jpg') }}"
+                 alt="Paris">
+
+            <h3>Paris</h3>
+
+            <p>Siège social</p>
+
+        </div>
+
+        <div class="service-card">
+
+            <img src="{{ url_for('static', filename='IMAGE/lyon.jpg') }}"
+                 alt="Lyon">
+
+            <h3>Lyon</h3>
+
+            <p>Agence régionale</p>
+
+        </div>
+
+        <div class="service-card">
+
+            <img src="{{ url_for('static', filename='IMAGE/marseille.jpg') }}"
+                 alt="Marseille">
+
+            <h3>Marseille</h3>
+
+            <p>Agence régionale</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

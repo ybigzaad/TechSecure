@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSecure Solutions</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo-zone">
+        <a href="{{ url_for('accueil') }}">
+            <img src="{{ url_for('static', filename='IMAGE/logo.png') }}" alt="Logo TechSecure">
+        </a>
+    </div>
+
+    <nav>
+        <a href="{{ url_for('accueil') }}">Accueil</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('filiales') }}">Filiales</a>
+        <a href="{{ url_for('entreprise') }}">À propos</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+{% block contenu %}
+
+{% endblock %}
+
+</main>
+
+<footer>
+
+© 2026 TechSecure Solutions – Site sécurisé avec Flask, MySQL et Docker
+
+</footer>
+
+</body>
+
+</html>
