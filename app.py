@@ -1,13 +1,14 @@
+from config import *
 from flask import Flask, render_template, request
 import mysql.connector
 
 app = Flask(__name__)
 
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="techsecure"
+    host=MYSQL_HOST,
+    user=MYSQL_USER,
+    password=MYSQL_PASSWORD,
+    database=MYSQL_DATABASE
 )
 
 cursor = db.cursor()
