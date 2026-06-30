@@ -30,15 +30,29 @@ Ce projet a été réalisé dans le cadre d'un TP sur le développement d'une ap
 
 ```text
 TechSecure/
+│
 ├── app.py
 ├── config.py
-├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
+├── requirements.txt
+├── README.md
+│
 ├── database/
+│ └── database.sql
+│
 ├── static/
-├── templates/
-└── README.md
+│ ├── IMAGE/
+│ └── style.css
+│
+└── templates/
+├── base.html
+├── index.html
+├── services.html
+├── filiales.html
+├── ajout_filiale.html
+├── contact.html
+└── entreprise.html
 ```
 
 ## Installation
@@ -71,6 +85,29 @@ L'application est accessible à l'adresse :
 
 ```text
 http://127.0.0.1:5000
+
+## Sécurité
+
+Les mesures de sécurité mises en place dans l'application sont :
+
+* Validation des données côté client avec les champs `required`.
+* Validation des données côté serveur avec Flask.
+* Utilisation de requêtes SQL paramétrées pour prévenir les injections SQL.
+* Configuration de la connexion MySQL à l'aide d'un fichier `config.py` et de variables d'environnement.
+
+## Déploiement avec Docker
+
+Le projet peut être déployé avec Docker grâce aux fichiers suivants :
+
+* `Dockerfile` : création de l'image de l'application Flask.
+* `docker-compose.yml` : déploiement des conteneurs Flask et MySQL.
+
+Commandes principales :
+
+```bash
+docker compose build
+docker compose up -d
+docker compose down
 ```
 
 ## Auteur
