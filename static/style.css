@@ -175,3 +175,74 @@ main{min-height:80vh}.flash{width:90%;margin:15px auto;background:#eaf4ff;border
     object-fit:cover;
     display:block;
 }
+
+/* Tableau des filiales */
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.table th{
+    background:#0d1f45;
+    color:#fff;
+    padding:14px;
+    text-align:left;
+}
+
+.table td{
+    padding:12px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.table tr:hover{
+    background:#f5f8fc;
+}
+
+/* Page À propos */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+    margin:30px 0;
+}
+
+.about img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+}
+
+.about-text{
+    color:#475569;
+    line-height:1.8;
+}
+
+/* Ajustement de la page À propos */
+
+.about{
+    max-width:900px;
+    margin:30px auto;
+}
+
+.about img{
+    max-width:280px;
+}
+
+.about-text{
+    font-size:14px;
+}
+
+.about + .card.four{
+    max-width:900px;
+    margin:20px auto;
+}
+
+.about + .card.four .service-card{
+    padding:18px 12px;
+}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block contenu %}
+
+<section class="section">
+
+    <div class="title-row">
+
+        <h2>Nos Filiales</h2>
+
+        <a href="{{ url_for('ajout') }}" class="btn">
+            + Ajouter une filiale
+        </a>
+
+    </div>
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Ville</th>
+                <th>Adresse</th>
+                <th>Responsable</th>
+                <th>Employés</th>
+                <th>IP Routeur</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Paris</td>
+                <td>123 Avenue de la Défense</td>
+                <td>Jean Dupont</td>
+                <td>65</td>
+                <td>192.168.10.1</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Lyon</td>
+                <td>45 Rue de la République</td>
+                <td>Sophie Martin</td>
+                <td>42</td>
+                <td>192.168.20.1</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Marseille</td>
+                <td>10 Boulevard de la Liberté</td>
+                <td>Marc Bernard</td>
+                <td>30</td>
+                <td>192.168.30.1</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+{% endblock %}
