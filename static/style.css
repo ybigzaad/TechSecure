@@ -246,3 +246,28 @@ main{min-height:80vh}.flash{width:90%;margin:15px auto;background:#eaf4ff;border
 .about + .card.four .service-card{
     padding:18px 12px;
 }
+
+/* Formulaire */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+form label{
+    margin-top:12px;
+    font-weight:bold;
+}
+
+form input,
+form textarea{
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #d9e2ef;
+    border-radius:6px;
+    font-size:15px;
+}
+
+form textarea{
+    resize:vertical;
+}

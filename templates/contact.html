@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block contenu %}
+
+<section class="section">
+
+    <h2>Contactez-nous</h2>
+
+    <div class="about">
+
+        <div>
+
+            <form>
+
+                <label>Nom</label>
+                <input type="text" name="nom" required>
+
+                <label>Prénom</label>
+                <input type="text" name="prenom" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Téléphone</label>
+                <input type="text" name="telephone">
+
+                <label>Message</label>
+                <textarea name="message" rows="6" required></textarea>
+
+                <br><br>
+
+                <button type="submit" class="btn">
+                    Envoyer le message
+                </button>
+
+            </form>
+
+        </div>
+
+        <div>
+
+            <h3>Nos coordonnées</h3>
+
+            <p><strong>Adresse :</strong><br>
+            15 Avenue de la Défense<br>
+            75000 Paris</p>
+
+            <p><strong>Téléphone :</strong><br>
+            +33 1 23 45 67 89</p>
+
+            <p><strong>Email :</strong><br>
+            contact@techsecure.fr</p>
+
+            <p><strong>Site Web :</strong><br>
+            www.techsecure.fr</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
