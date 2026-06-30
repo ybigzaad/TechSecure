@@ -1,6 +1,16 @@
 from flask import Flask, render_template, request
+import mysql.connector
 
 app = Flask(__name__)
+
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="root",
+    database="techsecure"
+)
+
+cursor = db.cursor()
 
 @app.route("/")
 def accueil():
@@ -20,12 +30,18 @@ def ajout():
         if not ville or not adresse or not responsable or not employes or not ip_routeur:
             return "Tous les champs sont obligatoires."
 
-        return "Le formulaire a bien été reçu par Flask."
-        print(ville)
-        print(adresse)
-        print(responsable)
-        print(employes)
-        print(ip_routeur)
+        cursor.execute(
+            """
+            INSERT INTO filiales
+            (ville, adresse, responsable, employes, ip_routeur)
+            VALUES (%s, %s, %s, %s, %s)
+            """,
+            (ville, adresse, responsable, employes, ip_routeur)
+        )
+
+        db.commit()
+
+        return "La filiale a été enregistrée avec succès."
 
     return render_template("ajout_filiale.html")
 
